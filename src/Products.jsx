@@ -1,6 +1,4 @@
 import React from "react";
-//import { GroceryList } from "./models/Products";
-//import React, { useState, useEffect } from "react";
 import Select from "./Select";
 import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from "mdbreact";
 import { useStoreState } from "easy-peasy";
