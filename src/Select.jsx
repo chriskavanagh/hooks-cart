@@ -6,13 +6,7 @@ const options = range(1, 6);
 
 const Select = ({ handleChange }) => {
   return (
-    <select
-      //value={value}
-      type="number"
-      name="quantity"
-      id="quantity"
-      onChange={handleChange}
-    >
+    <select type="number" name="quantity" id="quantity" onChange={handleChange}>
       {options.map(option => {
         return (
           <option key={option} value={option}>

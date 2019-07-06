@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import NavbarPage from "./Navbar";
 import Products from "./Products";
 import Cart from "./Cart";
 import "./App.css";
@@ -37,7 +38,8 @@ function App() {
 
   return (
     <Fragment>
-      <div className="container">
+      <NavbarPage />
+      <div className="container m-0 p-0">
         <div className="titleWrapper">
           <h1 className="title">Select Dropdown Example</h1>
         </div>

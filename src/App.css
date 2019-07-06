@@ -3,10 +3,12 @@
   flex-direction: column;
   max-width: 100% !important;
   align-items: center !important;
+  padding: 0px;
+  margin: 0px;
 }
 
 div.titleWrapper {
-  width: 100%;
+  min-width: 100% !important;
   background: #c2c2c2;
   display: flex;
   margin: 1rem auto;
@@ -16,7 +18,8 @@ div.titleWrapper {
 
 h1.title {
   text-align: center;
-  color: #007bff;
+  color: #f9f9fa;
+  font-weight: bolder;
   margin: 2rem auto 2rem auto;
 }
 
@@ -47,4 +50,16 @@ h4 {
   display: flex;
   justify-content: space-between;
   padding-top: 5rem;
+}
+
+.navbar {
+  margin-bottom: -15.6px;
+}
+
+li {
+  color: #007e33;
+}
+li span.quantityText {
+  color: black;
+  font-weight: bold;
 }

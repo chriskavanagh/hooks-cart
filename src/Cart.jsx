@@ -23,7 +23,8 @@ const Cart = ({ items, delItem }) => {
           <ul style={{ listStyleType: "circle" }}>
             {items.map((item, index) => (
               <li key={index}>
-                {item.name} - ${item.price.toFixed(2)} x {item.quantity}
+                {item.name} - ${item.price.toFixed(2)} x{" "}
+                <span className="quantityText">{item.quantity}</span>
                 <span>
                   <i
                     onClick={() => delItem(item)}
