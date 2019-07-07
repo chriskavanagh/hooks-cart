@@ -31,7 +31,7 @@ h1.title {
 }
 
 div.card {
-  border: 1px solid #007bff;
+  border: 3px solid #007bff;
   width: 300px;
   margin-left: 2rem;
   background-color: #f5f4f4 !important;
@@ -62,4 +62,8 @@ li {
 li span.quantityText {
   color: black;
   font-weight: bold;
+}
+
+button.checkoutButton {
+  margin: 0 auto;
 }

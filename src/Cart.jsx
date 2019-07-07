@@ -6,12 +6,13 @@ const Cart = ({ items, delItem }) => {
     <MDBCol>
       <MDBCard style={{ width: "22rem" }}>
         <MDBCardTitle className="text-center">
-          {!items.length && <p>Your Cart Is Empty </p>}
-          {items.length && (
+          {!items.length > 0 && <p>Your Cart Is Empty </p>}
+          {items.length > 0 && (
             <p
               style={{
                 textAlign: "center",
-                marginBottom: "2rem"
+                marginBottom: ".1rem",
+                textDecoration: "underline"
               }}
             >
               My Cart
@@ -24,7 +25,7 @@ const Cart = ({ items, delItem }) => {
             {items.map((item, index) => (
               <li key={index}>
                 {item.name} - ${item.price.toFixed(2)} x{" "}
-                <span className="quantityText">{item.quantity}</span>
+                <span className="quantityText">({item.quantity})</span>
                 <span>
                   <i
                     onClick={() => delItem(item)}
@@ -41,6 +42,15 @@ const Cart = ({ items, delItem }) => {
             ))}
           </ul>
           <hr />
+          <div class="d-flex justify-content-center">
+            <button
+              type="button"
+              class="checkoutButton btn btn-warning"
+              disabled={!items.length}
+            >
+              Checkout
+            </button>
+          </div>
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
