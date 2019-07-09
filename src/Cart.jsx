@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCol } from "mdbreact";
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCol, MDBBtn } from "mdbreact";
 
 const Cart = ({ items, delItem }) => {
   return (
@@ -21,12 +21,18 @@ const Cart = ({ items, delItem }) => {
         </MDBCardTitle>
 
         <MDBCardBody>
-          <ul style={{ listStyleType: "circle" }}>
+          <table cellpadding="10" style={{ width: "100%" }}>
             {items.map((item, index) => (
-              <li key={index}>
-                {item.name} - ${item.price.toFixed(2)} x{" "}
-                <span className="quantityText">({item.quantity})</span>
-                <span>
+              <tr key={index}>
+                <td>
+                  <b>{item.name}</b>
+                </td>
+                <td>
+                  <b>$</b>
+                  {item.price.toFixed(2)} x({item.quantity})
+                </td>
+
+                <td>
                   <i
                     onClick={() => delItem(item)}
                     className="fa fa-trash"
@@ -37,20 +43,10 @@ const Cart = ({ items, delItem }) => {
                       color: "#B22222"
                     }}
                   />
-                </span>
-              </li>
+                </td>
+              </tr>
             ))}
-          </ul>
-          <hr />
-          <div class="d-flex justify-content-center">
-            <button
-              type="button"
-              class="checkoutButton btn btn-warning"
-              disabled={!items.length}
-            >
-              Checkout
-            </button>
-          </div>
+          </table>
         </MDBCardBody>
       </MDBCard>
     </MDBCol>

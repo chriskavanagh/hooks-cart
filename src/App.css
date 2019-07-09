@@ -31,7 +31,7 @@ h1.title {
 }
 
 div.card {
-  border: 3px solid #007bff;
+  border: 1px solid #3f51b5 !important;
   width: 300px;
   margin-left: 2rem;
   background-color: #f5f4f4 !important;
@@ -57,7 +57,7 @@ h4 {
 }
 
 li {
-  color: #007e33;
+  color: #04130a;
 }
 li span.quantityText {
   color: black;
