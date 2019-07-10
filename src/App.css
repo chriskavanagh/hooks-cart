@@ -23,6 +23,17 @@ h1.title {
   margin: 2rem auto 2rem auto;
 }
 
+.card-title {
+  font-weight: bold;
+  color: #ff8800;
+  margin-top: 8px !important;
+  letter-spacing: 4px;
+}
+
+.card-title-wrapper {
+  border-bottom: #ff8800 2px solid;
+}
+
 .table {
   text-align: center;
   min-width: 800px;
@@ -35,15 +46,12 @@ div.card {
   width: 300px;
   margin-left: 2rem;
   background-color: #f5f4f4 !important;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
 div.cardBody {
   min-height: 300px !important;
-}
-
-h4 {
-  margin-top: 8px !important;
-  color: #ff7043 !important;
 }
 
 .parent {
@@ -56,14 +64,15 @@ h4 {
   margin-bottom: -15.6px;
 }
 
-li {
-  color: #04130a;
-}
-li span.quantityText {
-  color: black;
-  font-weight: bold;
-}
-
 button.checkoutButton {
   margin: 0 auto;
+}
+
+.item-name {
+  color: #3f51b5;
+}
+
+.item-price {
+  color: #ff8800;
+  font-weight: 400;
 }

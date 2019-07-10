@@ -1,4 +1,6 @@
-const items = [
+import { action } from "easy-peasy";
+
+/* const items = [
   { id: 1, name: "Sliced Bacon", price: 2.28, quantity: 1 },
   { id: 2, name: "Dried Beans", price: 1.58, quantity: 1 },
   { id: 3, name: "Pasta", price: 2.01, quantity: 1 },
@@ -18,9 +20,9 @@ const items = [
 
 export default {
   items
-};
+}; */
 
-/* export default {
+export default {
   items: [
     { id: 1, name: "Sliced Bacon", price: 2.28, quantity: 1 },
     { id: 2, name: "Dried Beans", price: 1.58, quantity: 1 },
@@ -38,4 +40,4 @@ export default {
     { id: 14, name: "Pepsi Cola", price: 4.99, quantity: 1 },
     { id: 15, name: "Beef", price: 12.99, quantity: 1 }
   ]
-}; */
+};

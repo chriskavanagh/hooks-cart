@@ -10,12 +10,38 @@ import {
   MDBFormInline
 } from "mdbreact";
 
-const NavbarPage = ({ items, paginate }) => {
+const NavbarPage = ({ items }) => {
+  //const { GroceryList } = items;
   const [isOpen, setisOpen] = useState(false);
+  const [searchQuery, setsearchQuery] = useState("");
+  const [filtered, setfiltered] = useState([]);
+
+  // easy-peasy action
+  const addFilter = useStoreActions(
+    actions => actions.CartModel.addfilteredList
+  );
 
   const toggleCollapse = () => {
     setisOpen(!isOpen);
   };
+
+  const handleChange = e => {
+    const { value } = e.target;
+    setsearchQuery(value);
+  };
+
+  const handleSearch = () => {
+    const filtered = items.filter(i => {
+      return i.name.toLowerCase().startsWith(searchQuery.toLowerCase());
+    });
+
+    setfiltered(filtered);
+  };
+
+  useEffect(() => {
+    addFilter(filtered);
+    console.log(filtered);
+  });
 
   return (
     <MDBNavbar color="indigo" dark expand="md" className="navbar">
@@ -34,6 +60,9 @@ const NavbarPage = ({ items, paginate }) => {
                   type="text"
                   placeholder="Search"
                   aria-label="Search"
+                  value={searchQuery}
+                  onChange={handleChange}
+                  onKeyUp={handleSearch}
                 />
               </div>
             </MDBFormInline>

@@ -6,6 +6,10 @@ import { useStoreState } from "easy-peasy";
 const Products = ({ addItem, handleChange }) => {
   // easy-peasy state
   const items = useStoreState(state => state.Products.items);
+  const filteredList = useStoreState(state => state.CartModel.filteredList);
+
+  // if search filteredList.length is use filteredList, if not use items
+  const groceryList = filteredList.length > 0 ? filteredList : items;
 
   return (
     <div className="table">
@@ -19,7 +23,7 @@ const Products = ({ addItem, handleChange }) => {
           </tr>
         </MDBTableHead>
         <MDBTableBody>
-          {items.map((item, index) => (
+          {groceryList.map((item, index) => (
             <tr key={index}>
               <td>
                 <MDBBtn

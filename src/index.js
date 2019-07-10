@@ -8,9 +8,11 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import { StoreProvider, createStore } from "easy-peasy";
 import Products from "./models/Products";
+import CartModel from "./models/CartModel";
 
 const root = {
-  Products
+  Products,
+  CartModel
 };
 const store = createStore(root);
 

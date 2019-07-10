@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import { useStoreState } from "easy-peasy";
 import NavbarPage from "./Navbar";
 import Products from "./Products";
 import Cart from "./Cart";
@@ -7,6 +8,7 @@ import "./App.css";
 function App() {
   const [quantity, setQuantity] = useState(1);
   const [products, setProducts] = useState([]);
+  const items = useStoreState(state => state.Products.items);
 
   const handleChange = e => {
     const { value } = e.target;
@@ -38,7 +40,7 @@ function App() {
 
   return (
     <Fragment>
-      <NavbarPage />
+      <NavbarPage items={items} />
       <div className="container m-0 p-0">
         <div className="titleWrapper">
           <h1 className="title">Select Dropdown Example</h1>
