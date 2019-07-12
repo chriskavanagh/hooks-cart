@@ -8,22 +8,13 @@ const Cart = ({ items, delItem }) => {
         <MDBCardTitle className="text-center card-title">
           <div className="card-title-wrapper">
             {!items.length > 0 && <p>Your Cart Is Empty </p>}
-            {items.length > 0 && (
-              <p
-                style={{
-                  textAlign: "center",
-                  marginBottom: ".1rem"
-                }}
-              >
-                My Cart
-              </p>
-            )}
+            {items.length > 0 && <p>My Cart</p>}
           </div>
         </MDBCardTitle>
 
         <MDBCardBody>
           <Fragment>
-            <table cellPadding="7" style={{ width: "100%" }}>
+            <table border="1" cellPadding="7" style={{ width: "100%" }}>
               {items.map((item, index) => (
                 <tbody key={index}>
                   <tr>

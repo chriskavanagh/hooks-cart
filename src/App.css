@@ -23,37 +23,6 @@ h1.title {
   margin: 2rem auto 2rem auto;
 }
 
-.card-title {
-  font-weight: bold;
-  color: #ff8800;
-  margin-top: 8px !important;
-  letter-spacing: 4px;
-}
-
-.card-title-wrapper {
-  border-bottom: #ff8800 2px solid;
-}
-
-.table {
-  text-align: center;
-  min-width: 800px;
-  background-color: #f5f4f4 !important;
-  border: 1px solid #e0eefd;
-}
-
-div.card {
-  border: 1px solid #3f51b5 !important;
-  width: 300px;
-  margin-left: 2rem;
-  background-color: #f5f4f4 !important;
-  letter-spacing: 2px;
-  font-weight: 700;
-}
-
-div.cardBody {
-  min-height: 300px !important;
-}
-
 .parent {
   display: flex;
   justify-content: space-between;
@@ -64,15 +33,63 @@ div.cardBody {
   margin-bottom: -15.6px;
 }
 
+/* ---------------Cart---------------- */
+.card-title {
+  font-weight: bold;
+  color: #e0eefd;
+  margin-top: 8px !important;
+  letter-spacing: 4px;
+}
+
+.card-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 auto 0 auto;
+  padding: 5px;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.card-title-wrapper p {
+  align-self: center !important;
+}
+
+.table {
+  text-align: center;
+  min-width: 800px;
+  background-color: #d6d4d4 !important;
+  border: 1px solid #e0eefd;
+}
+
+div.card {
+  border: 1px solid #3f51b5 !important;
+  width: 300px;
+  margin-left: 2rem;
+  background-color: #c2c2c2;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+div.cardBody {
+  min-height: 300px !important;
+}
+
 button.checkoutButton {
   margin: 0 auto;
 }
 
 .item-name {
-  color: #3f51b5;
+  color: #091349;
+  font-weight: 700;
 }
 
 .item-price {
-  color: #ff8800;
+  color: #091349;
   font-weight: 400;
+}
+
+.card-title-wrapper p {
+  text-align: center;
+  margin-bottom: 0.1rem;
 }

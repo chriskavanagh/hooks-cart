@@ -8,7 +8,7 @@ const Products = ({ addItem, handleChange }) => {
   const items = useStoreState(state => state.Products.items);
   const filteredList = useStoreState(state => state.CartModel.filteredList);
 
-  // if search filteredList.length is use filteredList, if not use items
+  // if search, (filteredList.length exists) use filteredList,if not use items
   const groceryList = filteredList.length > 0 ? filteredList : items;
 
   return (

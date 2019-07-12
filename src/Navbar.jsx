@@ -11,7 +11,6 @@ import {
 } from "mdbreact";
 
 const NavbarPage = ({ items }) => {
-  //const { GroceryList } = items;
   const [isOpen, setisOpen] = useState(false);
   const [searchQuery, setsearchQuery] = useState("");
   const [filtered, setfiltered] = useState([]);
@@ -40,7 +39,6 @@ const NavbarPage = ({ items }) => {
 
   useEffect(() => {
     addFilter(filtered);
-    console.log(filtered);
   });
 
   return (
