@@ -22,6 +22,8 @@ const NavbarPage = ({ items }) => {
     actions => actions.CartModel.addfilteredList
   );
 
+  const paginate = useStoreActions(actions => actions.Paginate.setCurrentPage);
+
   const toggleCollapse = () => {
     setisOpen(!isOpen);
   };
@@ -32,6 +34,7 @@ const NavbarPage = ({ items }) => {
   };
 
   const handleSearch = () => {
+    paginate(1);
     const filtered = items.filter(i => {
       return i.name.toLowerCase().startsWith(searchQuery.toLowerCase());
     });
