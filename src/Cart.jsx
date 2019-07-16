@@ -4,7 +4,7 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCol } from "mdbreact";
 const Cart = ({ items, delItem }) => {
   return (
     <MDBCol>
-      <MDBCard style={{ width: "22rem" }}>
+      <MDBCard style={{ width: "22rem" }} className="card">
         <MDBCardTitle className="text-center card-title">
           <div className="card-title-wrapper">
             {!items.length > 0 && <p>Your Cart Is Empty </p>}
@@ -14,10 +14,10 @@ const Cart = ({ items, delItem }) => {
 
         <MDBCardBody>
           <Fragment>
-            <table border="1" cellPadding="7" style={{ width: "100%" }}>
+            <table cellSpacing="5" cellPadding="8" style={{ width: "100%" }}>
               {items.map((item, index) => (
                 <tbody key={index}>
-                  <tr>
+                  <tr className="border_bottom">
                     <td>
                       <b className="item-name">{item.name}</b>
                     </td>

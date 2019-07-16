@@ -9,10 +9,12 @@ import "mdbreact/dist/css/mdb.css";
 import { StoreProvider, createStore } from "easy-peasy";
 import Products from "./models/Products";
 import CartModel from "./models/CartModel";
+import Paginate from "./models/Paginate";
 
 const root = {
   Products,
-  CartModel
+  CartModel,
+  Paginate
 };
 const store = createStore(root);
 

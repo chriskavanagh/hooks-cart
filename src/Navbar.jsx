@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useStoreActions } from "easy-peasy";
+import { useStoreActions, useStoreState } from "easy-peasy";
 import {
   MDBNavbar,
   MDBNavbarBrand,
@@ -14,6 +14,8 @@ const NavbarPage = ({ items }) => {
   const [isOpen, setisOpen] = useState(false);
   const [searchQuery, setsearchQuery] = useState("");
   const [filtered, setfiltered] = useState([]);
+
+  const total = useStoreState(state => state.Products.items.length);
 
   // easy-peasy action
   const addFilter = useStoreActions(
@@ -44,7 +46,7 @@ const NavbarPage = ({ items }) => {
   return (
     <MDBNavbar color="indigo" dark expand="md" className="navbar">
       <MDBNavbarBrand>
-        <strong className="white-text">Acme Development</strong>
+        <strong className="white-text">Acme {total}</strong>
       </MDBNavbarBrand>
       <MDBNavbarToggler onClick={toggleCollapse} />
       <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>

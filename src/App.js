@@ -1,7 +1,9 @@
 import React, { useState, Fragment } from "react";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import { useStoreState } from "easy-peasy";
 import NavbarPage from "./Navbar";
 import Products from "./Products";
+import Pagination from "./Pagination";
 import Cart from "./Cart";
 import "./App.css";
 
@@ -41,13 +43,19 @@ function App() {
   return (
     <Fragment>
       <NavbarPage items={items} />
-      <div className="container m-0 p-0">
-        <div className="titleWrapper">
-          <h1 className="title">Select Dropdown Example</h1>
-        </div>
 
-        <div className="parent">
+      <div className="titleWrapper">
+        <h1 className="title">Select Dropdown Example</h1>
+      </div>
+
+      <div className="wrapper">
+        <div className="one">
           <Products addItem={addItem} handleChange={handleChange} />
+        </div>
+        <div className="two">
+          <Pagination />
+        </div>
+        <div className="three">
           <Cart items={products} delItem={delItem} />
         </div>
       </div>

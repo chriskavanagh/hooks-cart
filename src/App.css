@@ -1,12 +1,3 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 100% !important;
-  align-items: center !important;
-  padding: 0px;
-  margin: 0px;
-}
-
 div.titleWrapper {
   min-width: 100% !important;
   background: #c2c2c2;
@@ -23,10 +14,24 @@ h1.title {
   margin: 2rem auto 2rem auto;
 }
 
-.parent {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 5rem;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-column-gap: 40px;
+}
+
+.one {
+  grid-column: 2 / 3;
+}
+
+.two {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.three {
+  grid-column: 3;
 }
 
 .navbar {
@@ -59,14 +64,13 @@ h1.title {
   text-align: center;
   min-width: 800px;
   background-color: #d6d4d4 !important;
-  border: 1px solid #e0eefd;
 }
 
 div.card {
   border: 1px solid #3f51b5 !important;
   width: 300px;
   margin-left: 2rem;
-  background-color: #c2c2c2;
+  background-color: #d6d4d4;
   letter-spacing: 2px;
   font-weight: 700;
 }
@@ -92,4 +96,41 @@ button.checkoutButton {
 .card-title-wrapper p {
   text-align: center;
   margin-bottom: 0.1rem;
+}
+
+.paginationUl {
+  margin-left: 18rem;
+}
+
+@media (max-width: 1322px) {
+  *,
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .card {
+    width: 100%;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-column-gap: 0px;
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+  }
+  .two {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+  }
+  .three {
+    grid-column: span 3;
+    grid-row: 3;
+    justify-self: center;
+    margin-bottom: 4rem;
+  }
 }
