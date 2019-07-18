@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import { useStoreState } from "easy-peasy";
 import NavbarPage from "./Navbar";
 import Products from "./Products";

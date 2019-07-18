@@ -26,7 +26,7 @@ const Products = ({ addItem, handleChange }) => {
   );
 
   return (
-    <MDBTable responsive>
+    <MDBTable responsive className="prodTable">
       <MDBTableHead color="primary-color" textWhite>
         <tr>
           <th>Add Item</th>
@@ -48,7 +48,9 @@ const Products = ({ addItem, handleChange }) => {
                 Add
               </MDBBtn>
             </td>
-            <td>{item.name}</td>
+            <td>
+              <b>{item.name}</b>
+            </td>
             <td>
               <Select handleChange={handleChange} />
             </td>

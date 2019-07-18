@@ -15,6 +15,7 @@ const NavbarPage = ({ items }) => {
   const [searchQuery, setsearchQuery] = useState("");
   const [filtered, setfiltered] = useState([]);
 
+  // number of items in cart
   const total = useStoreState(state => state.Products.items.length);
 
   // easy-peasy action
@@ -34,7 +35,10 @@ const NavbarPage = ({ items }) => {
   };
 
   const handleSearch = () => {
+    // set current page to #1 on search, otherwise results won't show
     paginate(1);
+
+    // filter items by search query
     const filtered = items.filter(i => {
       return i.name.toLowerCase().startsWith(searchQuery.toLowerCase());
     });

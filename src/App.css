@@ -16,22 +16,26 @@ h1.title {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 15rem 2fr auto 15rem;
   grid-auto-rows: minmax(100px, auto);
-  grid-column-gap: 40px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-areas:
+    ". products cart ."
+    ". pagination . .";
 }
 
 .one {
-  grid-column: 2 / 3;
+  grid-area: products;
 }
 
 .two {
-  grid-column: 2;
-  grid-row: 2;
+  grid-area: pagination;
+  justify-self: center;
 }
 
 .three {
-  grid-column: 3;
+  grid-area: cart;
 }
 
 .navbar {
@@ -39,6 +43,7 @@ h1.title {
 }
 
 /* ---------------Cart---------------- */
+
 .card-title {
   font-weight: bold;
   color: #e0eefd;
@@ -68,7 +73,7 @@ h1.title {
 
 div.card {
   border: 1px solid #3f51b5 !important;
-  width: 300px;
+  width: 22rem;
   margin-left: 2rem;
   background-color: #d6d4d4;
   letter-spacing: 2px;
@@ -98,22 +103,18 @@ button.checkoutButton {
   margin-bottom: 0.1rem;
 }
 
-.paginationUl {
-  margin-left: 18rem;
-}
-
 @media (max-width: 1322px) {
   *,
   body,
   html {
     overflow-x: hidden;
   }
-  .card {
-    width: 100%;
+  div.card {
+    min-width: 65vw;
   }
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-auto-rows: auto;
     grid-column-gap: 0px;
   }
@@ -128,9 +129,13 @@ button.checkoutButton {
     justify-self: center;
   }
   .three {
-    grid-column: span 3;
+    grid-column: 1;
     grid-row: 3;
     justify-self: center;
     margin-bottom: 4rem;
+  }
+  .prodTable {
+    min-width: 30rem;
+    overflow-x: visible;
   }
 }
