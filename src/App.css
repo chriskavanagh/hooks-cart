@@ -43,6 +43,9 @@ h1.title {
 }
 
 /* ---------------Cart---------------- */
+div .cartButton {
+  border-radius: 20px;
+}
 
 .card-title {
   font-weight: bold;
@@ -116,7 +119,6 @@ button.checkoutButton {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    grid-column-gap: 0px;
   }
   .one {
     grid-column: 1;

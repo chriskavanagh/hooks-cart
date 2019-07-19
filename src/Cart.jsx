@@ -1,5 +1,12 @@
 import React, { Fragment } from "react";
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCol } from "mdbreact";
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCol,
+  MDBBtn,
+  MDBRow
+} from "mdbreact";
 
 const Cart = ({ items, delItem }) => {
   return (
@@ -42,6 +49,12 @@ const Cart = ({ items, delItem }) => {
                 </tbody>
               ))}
             </table>
+            <hr />
+            <div className="d-flex justify-content-center">
+              <MDBBtn outline color="deep-orange" className="cartButton">
+                Checkout
+              </MDBBtn>
+            </div>
           </Fragment>
         </MDBCardBody>
       </MDBCard>

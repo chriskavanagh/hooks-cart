@@ -28,12 +28,14 @@ const Pagination = props => {
   return (
     <MDBPagination circle color="blue" className="mb-5">
       <MDBPageItem>
-        <MDBPageNav
-          aria-label="Previous"
-          onClick={() => paginate(currentPage - 1)}
-        >
-          {prev && <span aria-hidden="true">Previous</span>}
-        </MDBPageNav>
+        {prev && (
+          <MDBPageNav
+            aria-label="Previous"
+            onClick={() => paginate(currentPage - 1)}
+          >
+            <span aria-hidden="true">Previous</span>
+          </MDBPageNav>
+        )}
       </MDBPageItem>
       {pageNumbers.map(number => (
         <MDBPageItem
@@ -45,12 +47,14 @@ const Pagination = props => {
         </MDBPageItem>
       ))}
       <MDBPageItem>
-        <MDBPageNav
-          aria-label="Previous"
-          onClick={() => paginate(currentPage + 1)}
-        >
-          {next && <span aria-hidden="true">Next</span>}
-        </MDBPageNav>
+        {next && (
+          <MDBPageNav
+            aria-label="Previous"
+            onClick={() => paginate(currentPage + 1)}
+          >
+            <span aria-disabled="true">Next</span>
+          </MDBPageNav>
+        )}
       </MDBPageItem>
     </MDBPagination>
   );
