@@ -2,7 +2,7 @@ div.titleWrapper {
   min-width: 100% !important;
   background: #c2c2c2;
   display: flex;
-  margin: 1rem auto;
+  margin: 1rem auto 5rem auto;
   align-items: center !important;
   justify-content: center !important;
 }

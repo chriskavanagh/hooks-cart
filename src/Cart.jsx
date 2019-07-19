@@ -1,12 +1,5 @@
 import React, { Fragment } from "react";
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCol,
-  MDBBtn,
-  MDBRow
-} from "mdbreact";
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCol, MDBBtn } from "mdbreact";
 
 const Cart = ({ items, delItem }) => {
   return (
