@@ -49,7 +49,11 @@ function App() {
 
       <div className="wrapper">
         <div className="one">
-          <Products addItem={addItem} handleChange={handleChange} />
+          <Products
+            addItem={addItem}
+            handleChange={handleChange}
+            quantity={quantity}
+          />
         </div>
         <div className="two">
           <Pagination />

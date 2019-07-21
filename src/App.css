@@ -42,9 +42,13 @@ h1.title {
   margin-bottom: -15.6px;
 }
 
+td .prodButton {
+  border-radius: 5px;
+}
+
 /* ---------------Cart---------------- */
 div .cartButton {
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .card-title {

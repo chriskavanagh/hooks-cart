@@ -3,7 +3,7 @@ import Select from "./Select";
 import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from "mdbreact";
 import { useStoreState } from "easy-peasy";
 
-const Products = ({ addItem, handleChange }) => {
+const Products = ({ addItem, handleChange, quantity }) => {
   // easy-peasy state
   const currentPage = useStoreState(state => state.Paginate.currentPage);
   const items = useStoreState(state => state.Products.items);
@@ -40,6 +40,7 @@ const Products = ({ addItem, handleChange }) => {
           <tr key={index}>
             <td>
               <MDBBtn
+                className="prodButton"
                 outline
                 color="deep-orange"
                 size="sm"
@@ -52,7 +53,7 @@ const Products = ({ addItem, handleChange }) => {
               <b>{item.name}</b>
             </td>
             <td>
-              <Select handleChange={handleChange} />
+              <Select handleChange={handleChange} quantity={quantity} />
             </td>
             <td>{item.price}</td>
           </tr>

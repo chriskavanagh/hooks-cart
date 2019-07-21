@@ -4,9 +4,14 @@ import range from "lodash/range";
 
 const options = range(1, 6);
 
-const Select = ({ handleChange }) => {
+const Select = ({ handleChange, quantity }) => {
   return (
-    <select type="number" name="quantity" id="quantity" onChange={handleChange}>
+    <select
+      type="number"
+      value={quantity}
+      name="quantity"
+      onChange={handleChange}
+    >
       {options.map(option => {
         return (
           <option key={option} value={option}>
