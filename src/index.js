@@ -10,6 +10,7 @@ import { StoreProvider, createStore } from "easy-peasy";
 import Products from "./models/Products";
 import CartModel from "./models/CartModel";
 import Paginate from "./models/Paginate";
+import { BrowserRouter } from "react-router-dom";
 
 const root = {
   Products,
@@ -20,7 +21,9 @@ const store = createStore(root);
 
 ReactDOM.render(
   <StoreProvider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StoreProvider>,
   document.getElementById("root")
 );

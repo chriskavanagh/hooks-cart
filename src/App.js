@@ -1,9 +1,11 @@
 import React, { useState, Fragment } from "react";
+//import range from "lodash/range";
 import { useStoreState } from "easy-peasy";
 import NavbarPage from "./Navbar";
 import Products from "./Products";
 import Pagination from "./Pagination";
 import Cart from "./Cart";
+//import Home from "./Home";
 import "./App.css";
 
 function App() {
@@ -11,9 +13,9 @@ function App() {
   const [products, setProducts] = useState([]);
   const items = useStoreState(state => state.Products.items);
 
-  const handleChange = e => {
-    const { value } = e.target;
-    setQuantity(parseInt(value));
+  const handleChange = ({ target: { value } }) => {
+    //const { value } = e.target;
+    setQuantity(+value);
   };
 
   const addItem = item => {
