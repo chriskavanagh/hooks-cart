@@ -53,7 +53,11 @@ const Products = ({ addItem, handleChange, quantity }) => {
               <b>{item.name}</b>
             </td>
             <td>
-              <Select handleChange={handleChange} quantity={quantity} />
+              <Select
+                handleChange={handleChange}
+                quantity={quantity}
+                key={index}
+              />
             </td>
             <td>{item.price}</td>
           </tr>
